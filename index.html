@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name ="viewport" content = "width=device-width, initial scale=1">
+    <title>Easter Date Calculator</title>
+    <link rel="stylesheet" type="text/css"
+    href="style.css"/>
+</head>
+
+
+    
+<body>
+    <header><h1>Easter Date Calculator</h1>
+        <hr></header>
+    <p>
+        This page will allow you to enter a year, and it will determine what day Easter falls on in that year.
+    </p>
+
+    <form action="cgi-bin/easter.py" method = "GET">
+
+        <label for="theYear">Enter the year here:  </label>
+        <input type="number" id="theYear" name="theYear" size="4" required="required" min ="1" max ="9999"/>
+        <br><br>
+           
+
+        <label>How would you like the format for the Easter date? </label>
+        <br>
+        <input type="radio" name="dateformat" id="ddmmyyyy" checked="checked"
+             value="ddmmyyyy-" />
+            <label for ="ddmmyyyy">DD/MM/YYYY <span class="mini"><i>e.g. 12/04/2020</i></span></label><br>
+
+        <input type="radio" name="dateformat" id="daymonthyear"
+            value="daymonthyear-"/>
+            <label for ="daymonthyear">Day-Month-Year <span class="mini"><i>e.g. 12<sup>th</sup> April 2020</i></span></label><br>
+
+        <input type="radio" name="dateformat" id="bothdates"
+            value="bothdates-"/>
+            <label for ="bothdates">Both Formats <span class="mini"><i>e.g. 12<sup>th</sup> April 2020 and 12/04/2020</i></span></label><br><br>
+
+    <input type="reset" name="clear" value="Clear all choices" />
+    <br><br>
+    <input type="submit" value="Submit" />
+    <br><br>
+    
+    </form>
+</body>
+</html>
